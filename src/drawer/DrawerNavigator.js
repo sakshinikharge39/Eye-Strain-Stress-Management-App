@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import Main from "./Distance";
+import Main from "./Screens/Distance";
 import Main2 from "./BinkRate";
-import Setting from "./Setting";
+import Setting from "./Screens/Setting";
 import BottomNavigation from "../bottom/BottomNavigation";
 import { NavigationContainer } from "@react-navigation/native";
 

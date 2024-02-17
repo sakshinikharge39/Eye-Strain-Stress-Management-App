@@ -5,14 +5,14 @@ import {
   GestureHandlerRootView,
   FlatList,
 } from "react-native-gesture-handler";
-import Screen1 from "../bottom/Home";
-import { AntDesign } from "@expo/vector-icons";
-import Setting from "./Setting";
 
-import BlinkRate from "./BinkRate";
-import Distance from "./Distance";
-import DigitalWellbeing from "./DigitalWellbeing";
+import { AntDesign } from "@expo/vector-icons";
+
 import Home from "../bottom/Home";
+import BlinkRate from "./Screens/BinkRate";
+import DigitalWellbeing from "./Screens/DigitalWellbeing";
+import Distance from "./Screens/Distance";
+import Setting from "./Screens/Setting";
 
 export default function CustomDrawer() {
   const menu = [
