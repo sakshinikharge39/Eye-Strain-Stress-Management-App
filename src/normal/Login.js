@@ -179,7 +179,7 @@ export default function Login() {
                   }}
                   // onPress={handleSubmit(onSubmit)}
                   onPress={() => {
-                    navigation.navigate("WelcomeScreen");
+                    navigation.navigate("CustomDrawer");
                   }}
                 >
                   <Text

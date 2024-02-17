@@ -14,7 +14,7 @@ export default function WelcomeScreen() {
 
   const onPressLearnMore = () => {
     // Navigate to the home page (replace 'Home' with the name of your home screen)
-    navigation.navigate("CustomDrawer");
+    navigation.navigate("Login");
   };
 
   return (
