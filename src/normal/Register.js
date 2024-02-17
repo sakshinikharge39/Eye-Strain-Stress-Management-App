@@ -36,7 +36,7 @@ export default function Register() {
       if (response.ok) {
         methods.reset();
         console.log("Registration successful");
-        navigation.navigate("Home");
+        navigation.navigate("Login");
       } else {
         setError("message", {
           type: "manual",
@@ -67,7 +67,7 @@ export default function Register() {
             <Text
               style={{ fontSize: 20, fontWeight: "bold", color: "#4b0082" }}
             >
-              CinemaHub
+              EyeStrength
             </Text>
           </Text>
         </View>

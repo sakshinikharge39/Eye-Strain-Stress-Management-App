@@ -31,7 +31,7 @@ export default function Login() {
       if (response.ok) {
         methods.reset();
         console.log("login successful");
-        navigation.navigate("Home");
+        navigation.navigate("WelcomeScreen");
       } else {
         setError("message", {
           type: "manual",
@@ -59,7 +59,7 @@ export default function Login() {
             <Text
               style={{ fontSize: 20, fontWeight: "bold", color: "#4b0082" }}
             >
-              CinemaHub
+              EyeStrength
             </Text>
           </Text>
         </View>
@@ -179,7 +179,7 @@ export default function Login() {
                   }}
                   // onPress={handleSubmit(onSubmit)}
                   onPress={() => {
-                    navigation.navigate("CustomDrawer");
+                    navigation.navigate("WelcomeScreen");
                   }}
                 >
                   <Text

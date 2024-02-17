@@ -1,26 +1,46 @@
-import { StyleSheet, Text, View, Image } from "react-native";
-import React from "react";
+import React, { useState } from "react";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
-import { TouchableOpacity } from "react-native-gesture-handler";
 
 export default function BlinkRate() {
+  const [isBlinkReminderOn, setBlinkReminder] = useState(false);
+
+  const toggleBlinkReminder = () => {
+    setBlinkReminder(!isBlinkReminderOn);
+    // You can perform additional actions based on the state change
+  };
+
+  const stopButtonPressed = () => {
+    if (isBlinkReminderOn) {
+      setBlinkReminder(false);
+    } else {
+      console.log("Stop pressed when Blink reminder is already off");
+    }
+  };
+
   return (
     <View style={{ margin: 10 }}>
-      <View
-        style={{
-          justifyContent: "center",
-          alignItems: "center",
-          padding: 16,
-          marginTop: 40,
-          backgroundColor: "#D788CF",
-          borderRadius: 20,
-        }}
-      >
-        <Text style={{ fontSize: 20, fontWeight: "bold", color: "white" }}>
-          Blink reminder Fixed
-          <FontAwesome name="toggle-on" size={29} color="black" /> Smart
-        </Text>
-      </View>
+      <TouchableOpacity onPress={toggleBlinkReminder}>
+        <View
+          style={{
+            justifyContent: "center",
+            alignItems: "center",
+            padding: 16,
+            marginTop: 40,
+            backgroundColor: isBlinkReminderOn ? "#4CAF50" : "#D788CF",
+            borderRadius: 20,
+          }}
+        >
+          <Text style={{ fontSize: 20, fontWeight: "bold", color: "white" }}>
+            Blink reminder {isBlinkReminderOn ? "On" : "Off"}{" "}
+            <FontAwesome
+              name={isBlinkReminderOn ? "toggle-on" : "toggle-off"}
+              size={29}
+              color="black"
+            />
+          </Text>
+        </View>
+      </TouchableOpacity>
 
       <View style={{ paddingLeft: 10, marginTop: 30 }}>
         <Text style={{ fontSize: 20, fontWeight: "600", color: "#888" }}>
@@ -29,7 +49,8 @@ export default function BlinkRate() {
           user.
         </Text>
       </View>
-      <TouchableOpacity>
+
+      <TouchableOpacity onPress={stopButtonPressed}>
         <View style={styles.card}>
           <Text style={styles.textStyle}>Stop</Text>
         </View>
