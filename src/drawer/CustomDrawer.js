@@ -5,20 +5,22 @@ import {
   GestureHandlerRootView,
   FlatList,
 } from "react-native-gesture-handler";
-import Screen1 from "../bottom/Screen1";
+import Screen1 from "../bottom/Home";
 import { AntDesign } from "@expo/vector-icons";
 import Setting from "./Setting";
 
 import BlinkRate from "./BinkRate";
 import Distance from "./Distance";
+import DigitalWellbeing from "./DigitalWellbeing";
+import Home from "../bottom/Home";
 
 export default function CustomDrawer() {
   const menu = [
     { icon: "home", title: "Home" },
     { icon: "home", title: "Blink Rate" },
     { icon: "home", title: "Distance" },
-    { icon: "home", title: "Setting" },
-    { icon: "logout", title: "Logout" },
+    { icon: "home", title: "DigitalWellbeing" },
+    { icon: "logout", title: "Setting" },
   ];
   const [showMenu, setShowMenu] = useState(false);
   const [selectedMenuItem, setSelectedMenuItem] = useState(0);
@@ -49,13 +51,14 @@ export default function CustomDrawer() {
           style={{ width: "100", flexDirection: "row", alignItems: "center" }}
         >
           <Image
-            source={require("../../assets/logo.jpeg")}
+            source={require("../../assets/logo.png")}
             style={{
               width: 70,
               height: 70,
               borderRadius: 35,
               marginLeft: 10,
               marginTop: 30,
+              tintColor: "white",
             }}
           />
           <View>
@@ -130,21 +133,28 @@ export default function CustomDrawer() {
       >
         <View style={{ flexDirection: "row", marginTop: 50 }}>
           <TouchableOpacity style={{ marginLeft: 20 }} onPress={toggleMenu}>
-            <Image
-              source={require("../../assets/logo.jpeg")}
-              style={{ width: 30, height: 30 }}
-            />
+            {showMenu ? (
+              <Image
+                source={require("../../assets/logo.png")}
+                style={{ width: 70, height: 30 }}
+              />
+            ) : (
+              <Image
+                source={require("../../assets/logo.jpeg")}
+                style={{ width: 30, height: 30 }}
+              />
+            )}
           </TouchableOpacity>
           <Text style={{ marginLeft: 20, fontSize: 20, fontWeight: "800" }}>
             {menu[selectedMenuItem].title}
           </Text>
         </View>
         <View>
-          {selectedMenuItem === 0 && <Screen1 />}
+          {selectedMenuItem === 0 && <Home />}
           {selectedMenuItem === 1 && <BlinkRate />}
           {selectedMenuItem === 2 && <Distance />}
-          {selectedMenuItem === 3 && <Setting />}
-          {selectedMenuItem === 4 && <BlinkRate />}
+          {selectedMenuItem === 3 && <DigitalWellbeing />}
+          {selectedMenuItem === 4 && <Setting />}
         </View>
 
         {/* <BottomNavigation /> */}

@@ -26,7 +26,7 @@ export default function BottomNavigation() {
           }}
         >
           <Image
-            source={require("../../assets/logo.jpeg")}
+            source={require("../../assets/logo.png")}
             style={{ width: 30, height: 30 }}
           ></Image>
         </TouchableOpacity>
@@ -39,7 +39,7 @@ export default function BottomNavigation() {
           }}
         >
           <Image
-            source={require("../../assets/logo.jpeg")}
+            source={require("../../assets/logo.png")}
             style={{ width: 30, height: 30 }}
           ></Image>
         </TouchableOpacity>
@@ -52,7 +52,7 @@ export default function BottomNavigation() {
           }}
         >
           <Image
-            source={require("../../assets/logo.jpeg")}
+            source={require("../../assets/logo.png")}
             style={{ width: 30, height: 30 }}
           ></Image>
         </TouchableOpacity>
@@ -65,7 +65,7 @@ export default function BottomNavigation() {
           }}
         >
           <Image
-            source={require("../../assets/logo.jpeg")}
+            source={require("../../assets/logo.png")}
             style={{ width: 30, height: 30 }}
           ></Image>
         </TouchableOpacity>
@@ -78,7 +78,7 @@ export default function BottomNavigation() {
           }}
         >
           <Image
-            source={require("../../assets/logo.jpeg")}
+            source={require("../../assets/logo.png")}
             style={{ width: 30, height: 30 }}
           ></Image>
         </TouchableOpacity>
