@@ -7,6 +7,8 @@ import CustomDrawer from "./src/drawer/CustomDrawer";
 import Login from "./src/normal/Login";
 import Register from "./src/normal/Register";
 import WelcomeScreen from "./src/normal/WelcomScreen";
+import ProfilePage from "./src/normal/settingScreens/ProfilePage";
+import AppInfo from "./src/normal/settingScreens/AppInfo";
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -31,6 +33,16 @@ export default function App() {
         <Stack.Screen
           name="Register"
           component={Register}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="AppInfo"
+          component={AppInfo}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="ProfilePage"
+          component={ProfilePage}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
