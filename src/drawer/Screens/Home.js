@@ -47,11 +47,6 @@ export default function Home() {
     setVisible(false);
   };
 
-  const openModal = (category) => {
-    setSelectedCategory(category);
-    setVisible(true);
-  };
-
   return (
     <View>
       <Text
@@ -69,7 +64,7 @@ export default function Home() {
       </Text>
       {categories.map((item, index) => (
         <View key={item.Title}>
-          <TouchableOpacity onPress={() => openModal(item)}>
+          <TouchableOpacity onPress={() => setVisible(true)}>
             <View
               style={{
                 display: "flex",
