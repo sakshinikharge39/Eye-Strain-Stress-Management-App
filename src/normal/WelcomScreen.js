@@ -113,13 +113,13 @@ const WelcomeScreen = () => {
     outputRange: ["0deg", "360deg"],
   });
 
-  const onPressLearnMore = () => {
-    Alert.alert("Welcome to EyeStrength");
-    setTimeout(() => {
-      navigation.navigate("Login");
-    }, 2000);
-    rotateImage();
-  };
+  // const onPressLearnMore = () => {
+  //   Alert.alert("Welcome to EyeStrength");
+  setTimeout(() => {
+    navigation.navigate("Login");
+  }, 2000);
+  // rotateImage();
+  // };
 
   return (
     <View
@@ -142,9 +142,6 @@ const WelcomeScreen = () => {
       <View
         style={{
           display: "flex",
-          // alignItems: "center",
-
-          // backgroundColor: "blue",
           marginTop: 120,
         }}
       >
@@ -153,7 +150,7 @@ const WelcomeScreen = () => {
         </Text>
         <View style={{ display: "flex", alignItems: "center", marginTop: 20 }}>
           <TouchableOpacity
-            onPress={onPressLearnMore}
+            // onPress={onPressLearnMore}
             style={{
               backgroundColor: "#841584",
               display: "flex",

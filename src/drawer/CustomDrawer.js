@@ -8,7 +8,7 @@ import {
 
 import { AntDesign } from "@expo/vector-icons";
 
-import Home from "../bottom/Home";
+import Home from "./Screens/Home";
 import BlinkRate from "./Screens/BinkRate";
 import DigitalWellbeing from "./Screens/DigitalWellbeing";
 import Distance from "./Screens/Distance";
