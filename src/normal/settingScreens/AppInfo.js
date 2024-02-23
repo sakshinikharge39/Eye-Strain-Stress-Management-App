@@ -12,6 +12,7 @@ import {
 import FeatherIcon from "react-native-vector-icons/Feather";
 
 export default function AppInfo() {
+  const [color, setColor] = useState(false);
   const [form, setForm] = useState({
     darkMode: false,
     emailNotifications: true,
@@ -19,14 +20,20 @@ export default function AppInfo() {
   });
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
-      <View style={styles.container}>
-        <View style={styles.profile}>
-          <TouchableOpacity
-            onPress={() => {
-              // handle onPress
-            }}
-          >
+    <SafeAreaView style={{ flex: 1, backgroundColor: "#0000" }}>
+      <View
+        style={{ backgroundColor: color ? "black" : "white", height: "100%" }}
+      >
+        <View
+          style={{
+            padding: 24,
+            backgroundColor: color ? "black" : "white",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <View onPress={() => {}}>
             <View style={styles.profileAvatarWrapper}>
               <Image
                 alt=""
@@ -46,10 +53,20 @@ export default function AppInfo() {
                 </View>
               </TouchableOpacity>
             </View>
-          </TouchableOpacity>
+          </View>
 
           <View>
-            <Text style={styles.profileName}>John Doe</Text>
+            <Text
+              style={{
+                marginTop: 20,
+                fontSize: 19,
+                fontWeight: "600",
+                color: color ? "white" : "black",
+                textAlign: "center",
+              }}
+            >
+              John Doe
+            </Text>
 
             <Text style={styles.profileAddress}>
               123 Maple Street. Anytown, PA 17101
@@ -87,18 +104,10 @@ export default function AppInfo() {
 
               <View style={styles.rowSpacer} />
 
-              <Switch
-                onValueChange={(darkMode) => setForm({ ...form, darkMode })}
-                value={form.darkMode}
-              />
+              <Switch onValueChange={() => setColor(!color)} value={color} />
             </View>
 
-            <TouchableOpacity
-              onPress={() => {
-                // handle onPress
-              }}
-              style={styles.row}
-            >
+            <TouchableOpacity onPress={() => {}} style={styles.row}>
               <View style={[styles.rowIcon, { backgroundColor: "#32c759" }]}>
                 <FeatherIcon color="#fff" name="navigation" size={20} />
               </View>
@@ -165,12 +174,7 @@ export default function AppInfo() {
               <FeatherIcon color="#C6C6C6" name="chevron-right" size={20} />
             </TouchableOpacity>
 
-            <TouchableOpacity
-              onPress={() => {
-                // handle onPress
-              }}
-              style={styles.row}
-            >
+            <TouchableOpacity onPress={() => {}} style={styles.row}>
               <View style={[styles.rowIcon, { backgroundColor: "#007afe" }]}>
                 <FeatherIcon color="#fff" name="mail" size={20} />
               </View>
@@ -182,12 +186,7 @@ export default function AppInfo() {
               <FeatherIcon color="#C6C6C6" name="chevron-right" size={20} />
             </TouchableOpacity>
 
-            <TouchableOpacity
-              onPress={() => {
-                // handle onPress
-              }}
-              style={styles.row}
-            >
+            <TouchableOpacity onPress={() => {}} style={styles.row}>
               <View style={[styles.rowIcon, { backgroundColor: "#32c759" }]}>
                 <FeatherIcon color="#fff" name="star" size={20} />
               </View>
@@ -212,13 +211,7 @@ const styles = StyleSheet.create({
     flexShrink: 1,
     flexBasis: 0,
   },
-  profile: {
-    padding: 24,
-    backgroundColor: "#fff",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+
   profileAvatarWrapper: {
     position: "relative",
   },
@@ -238,13 +231,7 @@ const styles = StyleSheet.create({
     borderRadius: 9999,
     backgroundColor: "#007bff",
   },
-  profileName: {
-    marginTop: 20,
-    fontSize: 19,
-    fontWeight: "600",
-    color: "#414d63",
-    textAlign: "center",
-  },
+
   profileAddress: {
     marginTop: 5,
     fontSize: 16,
