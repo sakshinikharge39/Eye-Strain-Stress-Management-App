@@ -102,7 +102,7 @@ export default function BlinkRate() {
             alignItems: "center",
             padding: 16,
             marginTop: 40,
-            backgroundColor: isBlinkReminderOn ? "#4CAF51" : "#D788CF",
+            backgroundColor: isBlinkReminderOn ? "#4CAF50" : "#D788CF",
             borderRadius: 20,
           }}
         >
