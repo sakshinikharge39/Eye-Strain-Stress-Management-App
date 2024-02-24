@@ -216,6 +216,7 @@ const styles = StyleSheet.create({
     position: "relative",
   },
   profileAvatar: {
+    marginTop: 30,
     width: 72,
     height: 72,
     borderRadius: 9999,
